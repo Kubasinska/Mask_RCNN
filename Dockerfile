@@ -35,8 +35,14 @@ WORKDIR /workspace
 COPY mrcnn mrcnn
 COPY setup.py setup.py
 RUN /root/miniconda3/bin/conda run -n base python setup.py install
-RUN /root/miniconda3/bin/conda run -n base pip install -U scikit-image==0.16.2
 RUN /root/miniconda3/bin/conda run -n base conda install -c conda-forge imgaug
+RUN /root/miniconda3/bin/conda run -n base conda update ffmpeg
+RUN /root/miniconda3/bin/conda run -n base pip install -U scikit-image==0.16.2
+COPY get_weights.py get_weights.py
+RUN /root/miniconda3/bin/conda run -n base python get_weights.py
+RUN /root/miniconda3/bin/conda run -n base conda install decorators
+RUN /root/miniconda3/bin/conda run -n base conda install pip
+
 
 
 # Build: docker build -t maskrcnn:new .
