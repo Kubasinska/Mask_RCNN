@@ -1,0 +1,120 @@
+    1  ls
+    2  cd workspace/
+    3  ls
+    4  clear
+    5  ls
+    6  clear
+    7  ls
+    8  pip install -r requirements.txt
+    9  ls
+   10  python setup.py install
+   11  ipython
+   12  vim test.py
+   13  python test.py 
+   14  vim test.py
+   15  ls
+   16  cd assets/
+   17  ks
+   18  ls
+   19  cd ..
+   20  ipython
+   21  vim test.py
+   22  python test.py 
+   23  vim test.py
+   24  python test.py 
+   25  vim test.py
+   26  python test.py 
+   27  vim test.py
+   28  ls
+   29  cd '\workspace'/
+   30  ls
+   31  cd ..
+   32  ls
+   33  rm '\workspace'/
+   34  rm -r '\workspace'/
+   35  ls
+   36  vim test.py
+   37  python test.py 
+   38  vim test.py
+   39  ls
+   40  rm -r logs/
+   41  python test.py 
+   42  vim test.py
+   43  python test.py 
+   44  vim test.py
+   45  python test.py 
+   46  vim new_train.py
+   47  mkdir data
+   48  cd data/
+   49  ls
+   50  wget http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/001_chips_can/001_chips_can_berkeley_rgb_highres.tgz
+   51  ls
+   52  tar -xf 001_chips_can_berkeley_rgb_highres.tgz 
+   53  ls
+   54  cd ..
+   55  l
+   56  cd data/
+   57  ls
+   58  rm 001_chips_can_berkeley_rgb_highres.tgz 
+   59  ls
+   60  cd ..
+   61  vim ycb_process.py
+   62  cd data/
+   63  ls
+   64  clear
+   65  ls
+   66  cd ..
+   67  ls
+   68  vim ycb_process.py 
+   69  python ycb_process.py 
+   70  python new_train.py 
+   71  ls
+   72  cd name/
+   73  ks
+   74  ls
+   75  cd ..
+   76  python custom_train.py 
+   77  pcustom_train.py 
+   78  python custom_train.py 
+   79  python new_train.py 
+   80  ls
+   81  cd samples/
+   82  cd balloon/
+   83  ls
+   84  wget https://github.com/matterport/Mask_RCNN/releases/download/v2.1/mask_rcnn_balloon.h5
+   85  https://github.com/matterport/Mask_RCNN/releases/download/v2.1/balloon_dataset.zip
+   86  wget https://github.com/matterport/Mask_RCNN/releases/download/v2.1/balloon_dataset.zip
+   87  ls
+   88  python balloon.py train --dataset=/workspace/samples/balloon/balloon_dataset
+   89  python balloon.py train --dataset=/workspace/samples/balloon/balloon_dataset --weights=/workspace/mask_rcnn_coco.h5
+   90  python balloon.py train --dataset=/workspace/samples/balloon/balloon_dataset --weights=/workspace/samples/balloon/mask_rcnn_balloon.h5
+   91  ls
+   92  cd balloon
+   93  cd balloon_dataset/
+   94  las
+   95  ls
+   96  cd balloon/
+   97  lks
+   98  ls
+   99  clear
+  100  pwd
+  101  python balloon.py train --dataset=/workspace/samples/balloon/balloon_dataset/ballon/ --weights=/workspace/samples/balloon/mask_rcnn_balloon.h5
+  102  cd ..
+  103  python balloon.py train --dataset=/workspace/samples/balloon/balloon_dataset/ballon/ --weights=/workspace/samples/balloon/mask_rcnn_balloon.h5
+  104  python balloon.py train --dataset=/workspace/samples/balloon/balloon_dataset/balloon/ --weights=/workspace/samples/balloon/mask_rcnn_balloon.h5
+  105  pip install -U scikit-image==0.16.2
+  106  python balloon.py train --dataset=/workspace/samples/balloon/balloon_dataset/balloon/ --weights=/workspace/samples/balloon/mask_rcnn_balloon.h5
+  107  vim balloon.py 
+  108  python balloon.py train --dataset=/workspace/samples/balloon/balloon_dataset/balloon/ --weights=/workspace/samples/balloon/mask_rcnn_balloon.h5
+  109  htop
+  110  nvidia-smi
+  111  history
+  112  history grep pip
+  113  history grep | pip
+  114  history | grep pip
+  115  ls
+  116  cd ..
+  117  ls
+  118  cd ..
+  119  ls
+  120  history > history

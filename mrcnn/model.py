@@ -1806,7 +1806,6 @@ class DataGenerator(KU.Sequence):
                     batch_mrcnn_class_ids, -1)
                 outputs.extend(
                     [batch_mrcnn_class_ids, batch_mrcnn_bbox, batch_mrcnn_mask])
-
         return inputs, outputs
 
 
@@ -2322,6 +2321,7 @@ class MaskRCNN(object):
         # Data generators
         train_generator = DataGenerator(train_dataset, self.config, shuffle=True,
                                          augmentation=augmentation)
+
         val_generator = DataGenerator(val_dataset, self.config, shuffle=True)
 
         # Create log_dir if it does not exist
@@ -2363,9 +2363,8 @@ class MaskRCNN(object):
             validation_data=val_generator,
             validation_steps=self.config.VALIDATION_STEPS,
             max_queue_size=100,
-            workers=workers,
-            use_multiprocessing=workers > 1,
-        )
+            workers=1,
+            use_multiprocessing=False)
         self.epoch = max(self.epoch, epochs)
 
     def mold_inputs(self, images):
